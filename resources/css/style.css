@@ -1,13 +1,48 @@
 * {
-    font-family: helvetica, Arial, Helvetica, sans-serif;
+    font-family: helvetica, Arial, sans-serif;
+}
+
+.hero-background {
+    background-image: url(Images/ilya-pavlov-XPT-OtA0E-8-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+
+.features-card {
+    display: flex;
+    gap: 20px;
+}
+
+.hero p {
+    color: #6a00f4;
+}
+
+.feature-card {
+    padding: 20px;
+    background-color: #6a00f4;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+    color: #ffd6a5;
+
+}
+
+.feature-card:hover {
+    transition: ease-out;
 }
 
 /* Add a background color to the body */
 
 h1 {
-    color:bisque;
+    color: #ffd6a5 ;
     text-align: center;
-    background-color: aliceblue;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    color: #6a00f4;
 }
 
 p,
@@ -15,22 +50,37 @@ li {
     font-size: 18px;
 }
 
-body {
-    background-color: #f0f0f0;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    gap: 30px;
+.hero {
     text-align: center;
 }
 
+body {
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+
+.nav-link {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    gap: 30px;
+    text-decoration: none;
+}
+
+.nav-link li {
+        font-size: 75%;
+        color: #6a00f4;
+}
+
+.nav-link a {
+    text-decoration: none;
+}
 /* Add a hover effect to the navigation links */
 
 a {
-    color: #466995;
+    color: #ffd6a5;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -59,16 +109,45 @@ a:active {
     color: #5495ff;
 }
 
+.button {
+  font-family: 'Raleway', sans-serif;
+  background-color: #5495ff;
+  color: #ffd6a5;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.button:hover {
+  color: #ffd6a5;
+  background-color: #6a00f4;
+  font-size: larger;
+  transition: all 1s ease
+}
+
+.button:active {
+  color: #6a00f4;
+  background-color: #ffd6a5;
+  transform: translate(3px, 3px);
+}
+
+
 /* Add a hover effect to the sign-up button */
 
-.sign-up {
-    background-color: #466995;
-    color: white;
+.button, .sign-up {
+    background-color: #6a00f4;
+    color: #ffd6a5;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: background-color .15s, font-size .15s;
+    cursor: pointer;
 }
 
 .sign-up:visited {
@@ -86,4 +165,10 @@ a:active {
     font-size: 16px;
 }
 
+footer {
+    font-size: 10px;
+}
 
+footer p {
+    font-size: 10px;
+}
