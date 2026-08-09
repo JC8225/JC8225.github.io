@@ -25,6 +25,8 @@
     flex: 1;
     text-align: center;
     color: #ffd6a5;
+    max-height: auto;
+    max-width: auto;
 
 }
 
@@ -52,11 +54,13 @@ li {
 
 .hero {
     text-align: center;
+    padding: 60px 20px;
 }
 
 body {
     background-color: #f0f0f0;
     text-align: center;
+    margin: 0;
 }
 
 
