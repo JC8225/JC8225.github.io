@@ -1,178 +1,207 @@
 * {
+    box-sizing: border-box;
     font-family: helvetica, Arial, sans-serif;
 }
 
-.hero-background {
-    background-image: url(Images/ilya-pavlov-XPT-OtA0E-8-unsplash.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;   
+.site-header {
+    width: 100%;
+    background-color: #dedcdc;
+}
+
+body {
+    margin: 0;
+    background-color: #FAF8F5;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.hero {
+    width: 100%;
+    padding: 16px 12px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.activities-section {
+    width: 100%;
+    padding: 16px 12px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.activities-section h5 {
+    font-weight: 400;
 }
 
 .features-card {
     display: flex;
+    flex-wrap: wrap;
+    text-align: center;
     gap: 20px;
-}
-
-.hero p {
-    color: #6a00f4;
+    padding: 10px;
 }
 
 .feature-card {
+    border: 1px solid #ddd;
+    flex: 1 1 220px;
+    border-radius: 16px;
+    background-color: #fff;
+    max-width: 520px;
+
+}
+
+.shared-care {
+    text-align: center;
+}
+
+.shared-care .button {
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.shared-care-cards {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.shared-care-card {
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    flex: 1 1 180px;
+    padding: 10px;
+    background-color: #fff;
+    max-width: 260px;
+}
+
+.shared-care-child-card {
+    flex-basis: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 16px;
     padding: 20px;
-    background-color: #6a00f4;
-    border-radius: 10px;
-    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.shared-care-child-card h5 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.shared-care-child-card-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 14px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.child-update-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+
+
+.learning-section {
     text-align: center;
-    color: #ffd6a5;
-    max-height: auto;
-    max-width: auto;
-
 }
 
-.feature-card:hover {
-    transition: ease-out;
-}
-
-/* Add a background color to the body */
-
-h1 {
-    color: #ffd6a5 ;
+.development-areas {
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
+    gap: 20px;
+    padding: 10px;
+    justify-content: center;
 }
 
-.title {
-    text-align: center;
-    font-size: 40px;
-    color: #6a00f4;
+.development-card {
+    flex: 1 1 220px;
+    background-color: #fff;
+    border-radius: 14px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    max-width: 360px;
 }
 
-p,
-li {
-    font-size: 18px;
-}
-
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-body {
-    background-color: #f0f0f0;
-    text-align: center;
+.development-card h5 {
+    font-size: 16px;
     margin: 0;
 }
 
-
-.nav-link {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    justify-content: center;
-    gap: 30px;
-    text-decoration: none;
+.hero,
+.activities-section,
+.shared-care,
+.learning-section {
+    padding: 48px 12px;
 }
 
-.nav-link li {
-        font-size: 75%;
-        color: #6a00f4;
-}
-
-.nav-link a {
-    text-decoration: none;
-}
-/* Add a hover effect to the navigation links */
-
-a {
-    color: #ffd6a5;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-/* Add a visited state to the navigation links */
-
-a:visited {
-    color: #4a0068;
-}
-
-a:hover {
-    color: #1e3a5f;
-    text-decoration: none;
-}
-
-a:active {
-    color: #1e3a5f;
-}
-
-.nav-link {
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.nav-link:hover {
-    color: #5495ff;
+.features-card,
+.shared-care-cards,
+.development-areas {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .button {
-  font-family: 'Raleway', sans-serif;
-  background-color: #5495ff;
-  color: #ffd6a5;
-  font-size: 16px;
-  font-weight: 400;
-  padding: 14px;
-  text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 15px;
-  display: inline-block;
-}
+    border: 1px solid #3F7468;
+    border-radius: 50px;
+    background-color: #3F7468;
+    color: #fff;
 
-.button:hover {
-  color: #ffd6a5;
-  background-color: #6a00f4;
-  font-size: larger;
-  transition: all 1s ease
-}
-
-.button:active {
-  color: #6a00f4;
-  background-color: #ffd6a5;
-  transform: translate(3px, 3px);
-}
-
-
-/* Add a hover effect to the sign-up button */
-
-.button, .sign-up {
-    background-color: #6a00f4;
-    color: #ffd6a5;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 10px;
-    transition: background-color .15s, font-size .15s;
+    padding: 6px 18px;
     cursor: pointer;
-}
-
-.sign-up:visited {
-    color: white;
-}
-
-.sign-up:hover {
-    background-color: #3cff00;
-    font-size: 18px;
-}
-
-.sign-up:active {
-    background-color: #1e3a5f;
-    transition: background-color .15s, font-size .15s;
-    font-size: 16px;
-}
-
-footer {
-    font-size: 10px;
-}
-
-footer p {
-    font-size: 10px;
 }
