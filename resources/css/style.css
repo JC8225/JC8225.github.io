@@ -3,6 +3,39 @@
     font-family: helvetica, Arial, sans-serif;
 }
 
+h1 {
+    font-size: 42px;
+    line-height: 1.15;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.activities-section h5,
+.for-professionals-section h5,
+.guidance-section h5,
+.security-section h5 {
+    color: #666;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+main section h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+main section > h5,
+main section > p {
+    max-width: 700px;
+}
+
 .site-header {
     width: 100%;
     background-color: #dedcdc;
@@ -47,7 +80,6 @@ body {
 
 .hero {
     width: 100%;
-    padding: 16px 12px;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -57,12 +89,12 @@ body {
 
 .activities-section {
     width: 100%;
-    padding: 16px 12px;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-color: #FAF8F5;
 }
 
 .activities-section h5 {
@@ -88,6 +120,7 @@ body {
 
 .shared-care {
     text-align: center;
+    background-color: #F2F5F3;
 }
 
 .shared-care .button {
@@ -144,6 +177,7 @@ body {
     gap: 18px;
 }
 
+
 .child-update-row {
     display: flex;
     justify-content: space-between;
@@ -156,6 +190,7 @@ body {
 
 .learning-section {
     text-align: center;
+    background-color: #FAF8F5;
 }
 
 .development-areas {
@@ -187,12 +222,20 @@ body {
 .hero,
 .activities-section,
 .shared-care,
-.learning-section {
+.learning-section,
+.for-professionals-section,
+.security-section,
+.sign-up-section,
+.guidance-section {
     padding: 48px 12px;
 }
 
 .features-card,
 .shared-care-cards,
+.professionals-cards,
+.guidance-cards,
+.security-section,
+.sign-up-section,
 .development-areas {
     width: 100%;
     max-width: 1100px;
@@ -204,27 +247,90 @@ body {
     border-radius: 50px;
     background-color: #3F7468;
     color: #fff;
-
     padding: 6px 18px;
     cursor: pointer;
+
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #315d54;
+    border-color: #315d54;
+    background-color: #315d54;
+    border-color: #315d54;
+    transform: translateY(-1px);
+}
+
+.feature-card:hover,
+.guidance-cards .feature-card:hover {
+    transform: translateY(-3px);
+    transition: transform 0.2s ease;
+}
+
+.hero p,
+.shared-care > p,
+.learning-section > p,
+.guidance-section > h5,
+.security-section > h5 {
+    max-width: 650px;
+}
+
+section h2 {
+    margin-bottom: 12px;
+}
+
+section > p,
+section > h5 {
+    margin-bottom: 28px;
+}
+
+.feature-card a,
+.guidance-cards a {
+    color: #3F7468;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.observation-section {
+    padding: 64px 12px;
+    text-align: center;
+    background-color: #F3EEE8;
+}
+
+.observation-section > h1,
+.observation-section > h2 {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.observation-section .shared-care-child-card {
+    margin-top: 32px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
 .observation-update-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 20px;
     width: 100%;
+    text-align: center;
 }
 
 .observation-skills-container {
     width: 100%;
     background-color: #f1f1f1;
     border-radius: 14px;
-    padding: 18px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
+    flex-wrap: wrap;
     gap: 18px;
 }
 
@@ -234,7 +340,191 @@ body {
     background-color: #3F7468;
     color: #fff;
     text-align: center;
-    flex-wrap: wrap;
-
     padding: 6px 18px;
+    flex: 1 1 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.for-professionals-section {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #EEF2F4;
+}
+
+.professionals-cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.professional-card {
+    border: 1px solid #ddd;
+    flex: 1 1 220px;
+    border-radius: 16px;
+    background-color: #fff;
+    max-width: 520px;
+
+}
+
+.guidance-section {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #FAF8F5;
+}
+
+.guidance-cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.security-section {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #EEF4F1;
+}
+
+.security-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.security-card {
+    flex: 1 1 220px;
+    max-width: 260px;
+    padding: 24px;
+    border-radius: 16px;
+    background-color: #fff;
+}
+
+.sign-up-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+
+    background-color: #f1f1f1;
+}
+
+.sign-up-section h5 {
+    max-width: 600px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.sign-up-section h2 {
+    margin: 0;
+}
+
+.sign-up-section .button {
+    min-width: 180px;
+}
+
+.button-secondary {
+    background-color: transparent;
+    color: #3F7468;
+}
+
+footer {
+    background-color: #dedcdc;
+    padding: 48px 12px 20px;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.product-column,
+.professionals-column,
+.company-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+footer a {
+    color: #222;
+    text-decoration: none;
+}
+
+.product-column a:first-child h6,
+.professionals-column a:first-child h6,
+.company-column a:first-child h6 {
+    font-weight: 700;
+}
+
+.brand-block {
+    max-width: 280px;
+}
+
+footer h6 {
+    margin: 0;
+}
+
+.copyright {
+    max-width: 1100px;
+    margin: 32px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #bbb;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .footer-main {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .brand-block {
+        max-width: 100%;
+    }
+
+    .copyright {
+        text-align: left;
+    }
+
+    footer {
+        padding: 32px 20px 20px;
+    }
+}
+
+.feature-card,
+.development-card,
+.shared-care-card,
+.professional-card,
+.security-card {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
 }
