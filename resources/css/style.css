@@ -1,6 +1,15 @@
+/* =========================
+   GLOBAL
+   ========================= */
+
 * {
     box-sizing: border-box;
-    font-family: helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #FAF8F5;
 }
 
 h1 {
@@ -17,15 +26,6 @@ h3 {
     font-size: 20px;
 }
 
-.activities-section h5,
-.for-professionals-section h5,
-.guidance-section h5,
-.security-section h5 {
-    color: #666;
-    font-weight: 400;
-    line-height: 1.5;
-}
-
 main section h2 {
     margin-top: 0;
     margin-bottom: 12px;
@@ -36,17 +36,23 @@ main section > p {
     max-width: 700px;
 }
 
+section > p,
+section > h5 {
+    margin-bottom: 28px;
+}
+
+
+/* =========================
+   HEADER / NAVIGATION
+   ========================= */
+
 .site-header {
     width: 100%;
     background-color: #dedcdc;
+
     position: sticky;
     top: 0;
     z-index: 10;
-}
-
-body {
-    margin: 0;
-    background-color: #FAF8F5;
 }
 
 .navbar {
@@ -78,45 +84,155 @@ body {
     font-weight: 600;
 }
 
-.hero {
+
+/* =========================
+   SHARED SECTION LAYOUT
+   ========================= */
+
+.hero,
+.activities-section,
+.shared-care,
+.learning-section,
+.for-professionals-section,
+.guidance-section,
+.security-section,
+.sign-up-section {
+    padding: 48px 12px;
+}
+
+.activities-section,
+.for-professionals-section,
+.guidance-section,
+.security-section,
+.sign-up-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.features-card,
+.shared-care-cards,
+.professionals-cards,
+.guidance-cards,
+.development-areas {
     width: 100%;
-    display:flex;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.activities-section h5,
+.for-professionals-section h5,
+.guidance-section h5,
+.security-section h5 {
+    color: #666;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.hero p,
+.shared-care > p,
+.learning-section > p,
+.guidance-section > h5,
+.security-section > h5 {
+    max-width: 650px;
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.button {
+    display: inline-block;
+
+    border: 1px solid #3F7468;
+    border-radius: 50px;
+
+    background-color: #3F7468;
+    color: #fff;
+
+    padding: 6px 18px;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #315d54;
+    border-color: #315d54;
+    transform: translateY(-1px);
+}
+
+.button-secondary {
+    background-color: transparent;
+    color: #3F7468;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
+
+
+/* =========================
+   ACTIVITIES
+   ========================= */
 
 .activities-section {
-    width: 100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     background-color: #FAF8F5;
-}
-
-.activities-section h5 {
-    font-weight: 400;
 }
 
 .features-card {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
     gap: 20px;
     padding: 10px;
+    text-align: center;
 }
 
 .feature-card {
-    border: 1px solid #ddd;
     flex: 1 1 220px;
-    border-radius: 16px;
-    background-color: #fff;
     max-width: 520px;
 
+    border: 1px solid #ddd;
+    border-radius: 16px;
+
+    background-color: #fff;
 }
+
+.feature-card a,
+.guidance-cards a {
+    color: #3F7468;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.feature-card:hover,
+.guidance-cards .feature-card:hover {
+    transform: translateY(-3px);
+    transition: transform 0.2s ease;
+}
+
+
+/* =========================
+   SHARED CARE
+   ========================= */
 
 .shared-care {
     text-align: center;
@@ -124,36 +240,38 @@ body {
 }
 
 .shared-care .button {
-    display: inline-block;
     margin-top: 30px;
 }
 
 .shared-care-cards {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
     gap: 20px;
     padding: 10px;
+    text-align: center;
 }
 
 .shared-care-card {
+    flex: 1 1 180px;
+    max-width: 260px;
+
+    padding: 10px;
+
     border: 1px solid #ddd;
     border-radius: 30px;
-    flex: 1 1 180px;
-    padding: 10px;
+
     background-color: #fff;
-    max-width: 260px;
 }
 
 .shared-care-child-card {
-    flex-basis: 100%;
     max-width: 480px;
     margin: 0 auto;
+    padding: 20px;
 
     background-color: #fff;
+
     border: 1px solid #ddd;
     border-radius: 16px;
-    padding: 20px;
 
     display: flex;
     flex-direction: column;
@@ -168,25 +286,30 @@ body {
 
 .shared-care-child-card-container {
     width: 100%;
+    padding: 18px;
+
     background-color: #f1f1f1;
     border-radius: 14px;
-    padding: 18px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 18px;
 }
 
-
 .child-update-row {
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    width: 100%;
 }
 
 
+/* =========================
+   LEARNING / DEVELOPMENT
+   ========================= */
 
 .learning-section {
     text-align: center;
@@ -196,108 +319,40 @@ body {
 .development-areas {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
-    gap: 20px;
-    padding: 10px;
     justify-content: center;
+    gap: 20px;
+
+    padding: 10px;
+    text-align: center;
 }
 
 .development-card {
     flex: 1 1 220px;
+    max-width: 360px;
+
+    padding: 10px;
+
     background-color: #fff;
     border-radius: 14px;
-    padding: 10px;
 
     display: flex;
     flex-direction: column;
-    text-align: center; 
-    max-width: 360px;
+    text-align: center;
 }
 
 .development-card h5 {
-    font-size: 16px;
     margin: 0;
+    font-size: 16px;
 }
 
-.hero,
-.activities-section,
-.shared-care,
-.learning-section,
-.for-professionals-section,
-.security-section,
-.sign-up-section,
-.guidance-section {
-    padding: 48px 12px;
-}
 
-.features-card,
-.shared-care-cards,
-.professionals-cards,
-.guidance-cards,
-.security-section,
-.sign-up-section,
-.development-areas {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.button {
-    border: 1px solid #3F7468;
-    border-radius: 50px;
-    background-color: #3F7468;
-    color: #fff;
-    padding: 6px 18px;
-    cursor: pointer;
-
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 600;
-    transition: background-color 0.2s ease,
-                border-color 0.2s ease,
-                transform 0.2s ease;
-}
-
-.button:hover {
-    background-color: #315d54;
-    border-color: #315d54;
-    background-color: #315d54;
-    border-color: #315d54;
-    transform: translateY(-1px);
-}
-
-.feature-card:hover,
-.guidance-cards .feature-card:hover {
-    transform: translateY(-3px);
-    transition: transform 0.2s ease;
-}
-
-.hero p,
-.shared-care > p,
-.learning-section > p,
-.guidance-section > h5,
-.security-section > h5 {
-    max-width: 650px;
-}
-
-section h2 {
-    margin-bottom: 12px;
-}
-
-section > p,
-section > h5 {
-    margin-bottom: 28px;
-}
-
-.feature-card a,
-.guidance-cards a {
-    color: #3F7468;
-    font-weight: 600;
-    text-decoration: none;
-}
+/* =========================
+   OBSERVATION
+   ========================= */
 
 .observation-section {
     padding: 64px 12px;
+
     text-align: center;
     background-color: #F3EEE8;
 }
@@ -315,156 +370,184 @@ section > h5 {
 }
 
 .observation-update-row {
+    width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    width: 100%;
+
     text-align: center;
 }
 
 .observation-skills-container {
     width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 18px;
+
     background-color: #f1f1f1;
     border-radius: 14px;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 18px;
 }
 
 .observation-card-skills {
-    border: 1px solid #3F7468;
-    border-radius: 50px;
-    background-color: #3F7468;
-    color: #fff;
-    text-align: center;
-    padding: 6px 18px;
     flex: 1 1 0;
+    min-width: 0;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: 6px 18px;
+
+    border: 1px solid #3F7468;
+    border-radius: 50px;
+
+    background-color: #3F7468;
+    color: #fff;
+
+    text-align: center;
 }
 
+
+/* =========================
+   PROFESSIONALS
+   ========================= */
+
 .for-professionals-section {
-    width: 100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     background-color: #EEF2F4;
 }
 
 .professionals-cards {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    text-align: center;
     gap: 20px;
+
     padding: 10px;
+    text-align: center;
 }
 
 .professional-card {
-    border: 1px solid #ddd;
     flex: 1 1 220px;
-    border-radius: 16px;
-    background-color: #fff;
     max-width: 520px;
 
+    padding: 10px;
+
+    border: 1px solid #ddd;
+    border-radius: 16px;
+
+    background-color: #fff;
 }
 
+
+/* =========================
+   GUIDANCE
+   ========================= */
+
 .guidance-section {
-    width: 100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     background-color: #FAF8F5;
 }
 
 .guidance-cards {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    text-align: center;
     gap: 20px;
+
     padding: 10px;
+    text-align: center;
 }
 
+
+/* =========================
+   SECURITY
+   ========================= */
+
 .security-section {
-    width: 100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     background-color: #EEF4F1;
 }
 
 .security-cards {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    max-width: 1100px;
-    margin: 0 auto;
 }
 
 .security-card {
     flex: 1 1 220px;
     max-width: 260px;
+
     padding: 24px;
+
     border-radius: 16px;
     background-color: #fff;
 }
 
-.sign-up-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 16px;
 
+/* =========================
+   SIGN UP
+   ========================= */
+
+.sign-up-section {
+    gap: 16px;
     background-color: #f1f1f1;
+}
+
+.sign-up-section h2,
+.sign-up-section h5 {
+    margin: 0;
 }
 
 .sign-up-section h5 {
     max-width: 600px;
-    margin: 0;
     font-weight: 400;
-}
-
-.sign-up-section h2 {
-    margin: 0;
 }
 
 .sign-up-section .button {
     min-width: 180px;
 }
 
-.button-secondary {
-    background-color: transparent;
-    color: #3F7468;
+
+/* =========================
+   CARD SHADOWS
+   ========================= */
+
+.feature-card,
+.development-card,
+.shared-care-card,
+.professional-card,
+.security-card {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
 }
 
+
+/* =========================
+   FOOTER
+   ========================= */
+
 footer {
-    background-color: #dedcdc;
     padding: 48px 12px 20px;
+    background-color: #dedcdc;
 }
 
 .footer-main {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.brand-block {
+    max-width: 280px;
 }
 
 .product-column,
@@ -480,27 +563,30 @@ footer a {
     text-decoration: none;
 }
 
+footer h6 {
+    margin: 0;
+}
+
 .product-column a:first-child h6,
 .professionals-column a:first-child h6,
 .company-column a:first-child h6 {
     font-weight: 700;
 }
 
-.brand-block {
-    max-width: 280px;
-}
-
-footer h6 {
-    margin: 0;
-}
-
 .copyright {
     max-width: 1100px;
     margin: 32px auto 0;
     padding-top: 20px;
+
     border-top: 1px solid #bbb;
+
     text-align: center;
 }
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
 
 @media (max-width: 768px) {
     .footer-main {
@@ -519,12 +605,4 @@ footer h6 {
     footer {
         padding: 32px 20px 20px;
     }
-}
-
-.feature-card,
-.development-card,
-.shared-care-card,
-.professional-card,
-.security-card {
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
 }
